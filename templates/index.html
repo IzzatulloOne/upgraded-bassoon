@@ -55,9 +55,10 @@
         </header>
         <!-- Section-->
         <section class="py-5">
-            {% for products in product %}
             <div class="container px-4 px-lg-5 mt-5">
+                
                 <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+                    {% for products in product %}
                     <div class="col mb-5">
                         <div class="card h-100">
                             <!-- Product image-->
@@ -78,10 +79,11 @@
                             </div>
                         </div>
                     </div>
+                    {% endfor %}
                     <!-- Repeat similar blocks for more products, using {% static '...' %} for image paths -->
                 </div>
+                
             </div>
-            {% endfor %}
         </section>
         <!-- Footer-->
         <footer class="py-5 bg-dark">
